@@ -2336,6 +2336,9 @@ namespace Target.Droid
 			// aapt resource value: 0x7F010002
 			public const int blueStart = 2130771970;
 			
+			// aapt resource value: 0x7F010003
+			public const int blueWave = 2130771971;
+			
 			// aapt resource value: 0x7F090056
 			public const int design_bottom_navigation_item_background = 2131296342;
 			
@@ -2353,9 +2356,6 @@ namespace Target.Droid
 			
 			// aapt resource value: 0x7F09005B
 			public const int design_snackbar_background = 2131296347;
-			
-			// aapt resource value: 0x7F010003
-			public const int hamburger = 2130771971;
 			
 			// aapt resource value: 0x7F090054
 			public const int ic_audiotrack_dark = 2131296340;
@@ -2890,6 +2890,9 @@ namespace Target.Droid
 			
 			// aapt resource value: 0x7F010004
 			public const int logo = 2130771972;
+			
+			// aapt resource value: 0x7F010005
+			public const int logoIGSmall = 2130771973;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;

@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>Motorola moto e5 plus</SelectedDevice>
     <DefaultDevice>Android_Accelerated_x86_Oreo</DefaultDevice>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
