@@ -34,6 +34,7 @@ namespace Target
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.Register<IAuthenticationService, AuthenticationService>();
+            containerRegistry.RegisterForNavigation<LoginPageGoogle, LoginPageGoogleViewModel>();
         }
     }
 }

@@ -1,15 +1,13 @@
 ﻿using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Text.RegularExpressions;
 using Target.Services;
 
 namespace Target.ViewModels
 {
-	public class LoginPageViewModel : ViewModelBase
+    public class LoginPageViewModel : ViewModelBase
 	{
         IAuthenticationService _authenticationService { get; }
         IPageDialogService _pageDialogService { get; }
@@ -24,7 +22,14 @@ namespace Target.ViewModels
             LoginCommand = new DelegateCommand(OnLoginCommandExecuted, LoginCommandCanExecute)
                 .ObservesProperty(() => UserName)
                 .ObservesProperty(() => Password);
+            LoginGoogleCommand = new DelegateCommand(OnLoginGoogleCommandExecuted);
         }
+
+        private void OnLoginGoogleCommandExecuted()
+        {
+            NavigationService.NavigateAsync("/LoginPageGoogle");
+        }
+
         private string _background;
 
         public string Background
@@ -48,6 +53,7 @@ namespace Target.ViewModels
 
         public DelegateCommand LoginCommand { get; }
 
+        public DelegateCommand LoginGoogleCommand { get; }
         private async void OnLoginCommandExecuted()
         {
             IsBusy = true;
@@ -63,6 +69,9 @@ namespace Target.ViewModels
         }
 
         private bool LoginCommandCanExecute() =>
-            !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password) && IsNotBusy;
+            !string.IsNullOrWhiteSpace(UserName) 
+            && !string.IsNullOrWhiteSpace(Password)
+            && Regex.IsMatch(UserName, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")
+            && IsNotBusy;
     }
 }

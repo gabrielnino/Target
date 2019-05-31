@@ -2892,7 +2892,10 @@ namespace Target.Droid
 			public const int logo = 2130771972;
 			
 			// aapt resource value: 0x7F010005
-			public const int logoIGSmall = 2130771973;
+			public const int logoGoogle = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int logoIGSmall = 2130771974;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;

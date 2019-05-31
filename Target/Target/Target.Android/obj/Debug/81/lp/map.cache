@@ -1,8 +1,11 @@
 DryIoc
 FormsViewGroup
+Newtonsoft.Json
 Prism
 Prism.DryIoc.Forms
 Prism.Forms
+System.Net.Http.Extensions
+System.Net.Http.Primitives
 System.Runtime
 Target
 Xamarin.Android.Arch.Core.Common

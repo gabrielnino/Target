@@ -34,6 +34,7 @@ C:\Users\hp\Documents\GitHub\Target\Target\Target\Target\obj\Debug\netstandard2.
 C:\Users\hp\Documents\GitHub\Target\Target\Target\Target\obj\Debug\netstandard2.0\Target.csproj.CoreCompileInputs.cache
 C:\Users\hp\Documents\GitHub\Target\Target\Target\Target\obj\Debug\netstandard2.0\Target.AssemblyInfoInputs.cache
 C:\Users\hp\Documents\GitHub\Target\Target\Target\Target\obj\Debug\netstandard2.0\Target.AssemblyInfo.cs
-C:\Users\hp\Documents\GitHub\Target\Target\Target\Target\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\hp\Documents\GitHub\Target\Target\Target\Target\obj\Debug\netstandard2.0\Target.dll
 C:\Users\hp\Documents\GitHub\Target\Target\Target\Target\obj\Debug\netstandard2.0\Target.pdb
+C:\Users\hp\Documents\GitHub\Target\Target\Target\Target\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\hp\Documents\GitHub\Target\Target\Target\Target\obj\Debug\netstandard2.0\Views\LoginPageGoogle.xaml.g.cs

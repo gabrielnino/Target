@@ -28,8 +28,8 @@
                 </StackLayout>
                 <StackLayout Grid.Row="2" HorizontalOptions="Center">
                     <Label HorizontalTextAlignment="Center" Text="Iniciar session con" FontSize="Medium"/>
-                    <StackLayout Orientation="Horizontal">
-                        <BoxView Grid.Row="0" BackgroundColor="White" WidthRequest="45" HeightRequest="45"/>
+                    <StackLayout Orientation="Horizontal" >
+                        <Button Image="logoGoogle.png" BackgroundColor="White" Command="{Binding LoginGoogleCommand}" />
                         <BoxView Grid.Row="0" BackgroundColor="White" WidthRequest="45" HeightRequest="45"/>
                         <BoxView Grid.Row="0" BackgroundColor="White" WidthRequest="45" HeightRequest="45"/>
                     </StackLayout>
