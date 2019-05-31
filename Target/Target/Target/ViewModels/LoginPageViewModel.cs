@@ -71,7 +71,7 @@ namespace Target.ViewModels
         private bool LoginCommandCanExecute() =>
             !string.IsNullOrWhiteSpace(UserName) 
             && !string.IsNullOrWhiteSpace(Password)
-            && Regex.IsMatch(UserName, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")
+            && Regex.IsMatch(UserName, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")//validar que sea un correo
             && IsNotBusy;
     }
 }

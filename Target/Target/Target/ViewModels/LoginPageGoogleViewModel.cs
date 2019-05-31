@@ -1,15 +1,10 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using Prism.Navigation;
+﻿using Prism.Navigation;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Target.ViewModels
 {
-	public class LoginPageGoogleViewModel : ViewModelBase
+    public class LoginPageGoogleViewModel : ViewModelBase
     {
 
         public LoginPageGoogleViewModel(INavigationService navigationService) : base(navigationService)

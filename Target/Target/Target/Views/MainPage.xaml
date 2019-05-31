@@ -5,7 +5,7 @@
              Title="{Binding Title}">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Usted esta logueado por fin leiste el codigo bien hecho.. ha y siga trabando" />
+        <Label Text="Usted esta logueado por,,, fin leiste el codigo bien hecho.siga y por favor ha trabajar" />
     </StackLayout>
 
 </ContentPage>

@@ -16,18 +16,18 @@
                 </Grid.RowDefinitions>
                 <Image Grid.Row="0" Source="logoIGSmall.jpg" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
                 <StackLayout Grid.Row="1" Padding="20,40,40,0">
-                    <Entry Text="{Binding UserName}" Placeholder="Correo electronico" PlaceholderColor="White"/>
+                    <Entry Text="{Binding UserName}" Placeholder="Correo electrónico" PlaceholderColor="White"/>
                     <Entry Text="{Binding Password}" Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True"/>
                     <StackLayout Orientation="Horizontal" Padding="0,20,0,20">
-                        <Button Text="Iniciar session" Command="{Binding LoginCommand}"  HorizontalOptions="CenterAndExpand" BackgroundColor="White" BorderRadius="20" TextColor="Black"/>
+                        <Button Text="Iniciar sesión" Command="{Binding LoginCommand}"  HorizontalOptions="CenterAndExpand" BackgroundColor="White" BorderRadius="20" TextColor="Black"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label TextColor="White"  Text="¿recuperar contraseña" FontSize="Medium" FontAttributes="Bold"></Label>
+                        <Label TextColor="White"  Text="¿Recuperar contraseña" FontSize="Medium" FontAttributes="Bold"></Label>
                         <Label TextColor="White" Text="Registrarse" HorizontalOptions="EndAndExpand" FontSize="Medium" FontAttributes="Bold"></Label>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="2" HorizontalOptions="Center">
-                    <Label HorizontalTextAlignment="Center" Text="Iniciar session con" FontSize="Medium"/>
+                    <Label HorizontalTextAlignment="Center" Text="Iniciar sesion con" FontSize="Medium"/>
                     <StackLayout Orientation="Horizontal" >
                         <Button Image="logoGoogle.png" BackgroundColor="White" Command="{Binding LoginGoogleCommand}" />
                         <BoxView Grid.Row="0" BackgroundColor="White" WidthRequest="45" HeightRequest="45"/>
