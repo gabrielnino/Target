@@ -5,10 +5,18 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <application android:label="Target.Android" android:icon="@mipmap/ic_launcher" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/ic_launcher" android:label="Target" android:theme="@style/MainTheme" android:name="md5bedf245414eb30303b6b4f65a5c59c17.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/ic_launcher" android:label="Target" android:launchMode="singleInstance" android:theme="@style/MainTheme" android:name="md5bedf245414eb30303b6b4f65a5c59c17.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:host="m.eltiempo.com" />
+        <data android:path="/oauth2redirect" />
+        <data android:scheme="https" />
       </intent-filter>
     </activity>
     <receiver android:enabled="true" android:exported="false" android:name="md51558244f76c53b6aeda52c8a337f2c37.PowerSaveModeBroadcastReceiver" />

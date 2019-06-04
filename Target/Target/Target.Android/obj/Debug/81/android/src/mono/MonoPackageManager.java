@@ -113,8 +113,6 @@ class MonoPackageManager_Resources {
 		"Prism.dll",
 		"Prism.DryIoc.Forms.dll",
 		"Prism.Forms.dll",
-		"System.Net.Http.Extensions.dll",
-		"System.Net.Http.Primitives.dll",
 		"Target.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

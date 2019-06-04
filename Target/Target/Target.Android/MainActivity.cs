@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Prism;
@@ -6,7 +7,11 @@ using Prism.Ioc;
 
 namespace Target.Droid
 {
-    [Activity(Label = "Target", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+
+
+   
+    [Activity(Label = "Target", Icon = "@mipmap/ic_launcher", LaunchMode = LaunchMode.SingleInstance, Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable }, DataScheme = "https", DataHost = "m.eltiempo.com", DataPath = "/oauth2redirect")]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -17,16 +22,20 @@ namespace Target.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App(new AndroidInitializer()));
+            LoadApplication(new App());
         }
-    }
 
-    public class AndroidInitializer : IPlatformInitializer
-    {
-        public void RegisterTypes(IContainerRegistry containerRegistry)
+        protected override void OnNewIntent(Intent intent)
         {
-            // Register any platform specific implementations
+            if (intent.Data != null)
+            {
+                var data = intent.Data;
+
+                string queryParameter = data.GetQueryParameter("code");
+                App.getGoogleCode(queryParameter);
+
+            }
+            base.OnNewIntent(intent);
         }
     }
 }
-

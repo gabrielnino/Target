@@ -31,3 +31,6 @@ Xamarin.Forms.Xaml
 netstandard
 System.Diagnostics.Tools
 System.Reflection.Extensions
+Newtonsoft.Json
+System.Net.Http.Extensions
+System.Net.Http.Primitives

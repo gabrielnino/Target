@@ -4,6 +4,7 @@ using Prism.Services;
 using System;
 using System.Text.RegularExpressions;
 using Target.Services;
+using Xamarin.Forms;
 
 namespace Target.ViewModels
 {
@@ -27,7 +28,14 @@ namespace Target.ViewModels
 
         private void OnLoginGoogleCommandExecuted()
         {
-            NavigationService.NavigateAsync("/LoginPageGoogle");
+            var authRequest =
+                "https://accounts.google.com/o/oauth2/v2/auth"
+                + "?response_type=code"
+                + "&scope=openid"
+                + "&redirect_uri=" + GoogleServices.RedirectUri
+                + "&client_id=" + GoogleServices.ClientId;
+            Device.OpenUri(new Uri(authRequest));
+            //NavigationService.NavigateAsync("/LoginPageGoogle");
         }
 
         private string _background;
